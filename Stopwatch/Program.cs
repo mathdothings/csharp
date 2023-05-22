@@ -29,14 +29,15 @@ static void Menu()
   Console.Write("How many time to count: ");
 
   string input = Console.ReadLine().ToLower();
-  char type = Convert.ToChar(input.Substring(input.Length - 1, 1));
-  int time = int.Parse(input.Substring(0, input.Length - 1));
+  char type = char.Parse(input.Substring(input.Length - 1, 1));
   int MULTIPLIER = 1;
 
+  if (type == '0')
+    Environment.Exit(0);
   if (type == 'm')
     MULTIPLIER = 60;
-  if (time == 0)
-    Environment.Exit(0);
+
+  int time = int.Parse(input.Substring(0, input.Length - 1));
 
   Start(time * MULTIPLIER);
 }
