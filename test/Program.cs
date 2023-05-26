@@ -1,5 +1,4 @@
-﻿// See https://aka.ms/new-console-template for more information
-
+﻿using MySqlConnector;
 namespace MyApp
 {
   class Program
@@ -8,20 +7,18 @@ namespace MyApp
     {
       Console.Clear();
 
-      // Product mouse = new Product();
-      // mouse.Id = 0;
-      // mouse.Name = "Mouse Gamer Log";
-      // mouse.Price = 120.00f;
-      // Console.WriteLine(mouse.Id);
-      // Console.WriteLine(mouse.Name);
-      // Console.WriteLine(mouse.Price);
-      // Console.WriteLine(mouse.PrinceInDolar(5.25f));
-
       var keyboard = new Product(1, "Keyboard Log", 100.00f, EProductType.Product);
       // Console.WriteLine(keyboard.ShowInfo());
 
       var course = new Product(2, "C# Fundamentals", 50.00f, EProductType.Service);
-      Console.WriteLine(course.ShowInfo());
+      // Console.WriteLine(course.ShowInfo());
+
+      string connectionString = "Server=localhost;User ID=root;Password=PassWord123#@!;Database=dates";
+      using var connection = new MySqlConnection(connectionString);
+      connection.Open();
+      var command = new MySqlCommand("INSERT INTO comments(content) VALUES('Testing new content')", connection);
+      command.ExecuteNonQuery();
+      connection.Close();
     }
   }
 

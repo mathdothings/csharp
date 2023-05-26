@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "zuBieFUVA74Mbalp73fCKiuntxr0yizNmfRWh6lQy/hcExOAsO6xtGLxj5IY5N1pA/qgav1PFb7saiSG8G+Xmg==",
+  "dgSpecHash": "Ysim4ZWhylUyoulKhSmKs1fOY5ygLHMW8e2rIQjkSlHOPP/03lgkK8zWlilq0+Nqv6SoF7MFjy4VvKjVYU2P8g==",
   "success": true,
   "projectFilePath": "/home/mathdothings/learn/csharp/test/test.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "/home/mathdothings/.nuget/packages/mysqlconnector/2.2.6/mysqlconnector.2.2.6.nupkg.sha512"
+  ],
   "logs": []
 }
