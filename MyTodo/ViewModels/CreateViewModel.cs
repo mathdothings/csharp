@@ -6,7 +6,7 @@ namespace MyTodo.ViewModels;
 
 public class CreateTodoViewModel : Notifiable<Notification>
 {
-  public string Title { get; set; }
+  public string Title { get; set; } = String.Empty;
 
   public Todo MapTo()
   {

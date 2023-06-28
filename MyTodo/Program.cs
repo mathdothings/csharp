@@ -1,5 +1,4 @@
 using MyTodo.Data;
-using MyTodo.Models;
 using MyTodo.ViewModels;
 
 var builder = WebApplication.CreateBuilder(args);
