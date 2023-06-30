@@ -1,4 +1,4 @@
-namespace user_crud;
+namespace UserCRUD;
 
 public class WeatherForecast
 {
