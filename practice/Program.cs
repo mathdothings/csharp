@@ -1,17 +1,31 @@
-﻿using Enemies;
-
-namespace Practice
+﻿namespace Practice
 {
   public class Program
   {
     public static void Main()
     {
+      Console.Clear();
 
-      var orc = new Enemy("Orc Warrior", 1, 30, 14, "Orc");
-      System.Console.WriteLine($"Name: {orc.Name}\nType: {orc.Type}");
+      var myBankAccout = new BankAccout("John", 500);
+      var myExpense = new Expense(-100);
 
-      // var dragon = new Dragon("Smaug", 15);
-      // System.Console.WriteLine($"{dragon.Name} {dragon.CR}");
+      if (myBankAccout.Money > myExpense.Value && myExpense.Value > 0)
+      {
+        myBankAccout.Money -= myExpense.Value;
+        System.Console.WriteLine
+        (
+        "### Before Transaction ###" + "\n" +
+        $"Name: {myBankAccout.Name}" + "\n" +
+        $"Money: {myBankAccout.Money}" + "\n" +
+        "### After Transaction ###" + "\n" +
+        $"Name: {myBankAccout.Name}" + "\n" +
+        $"Money: {myBankAccout.Money}" + "\n"
+        );
+      }
+      else
+      {
+        System.Console.WriteLine("Invalid transaction!");
+      }
     }
   }
 }
