@@ -8,8 +8,7 @@ namespace NumberGuessingGame
     {
       Console.Clear();
       var game = new GuessingGame();
-      game.ShowStartingMessage();
-      System.Console.WriteLine(game.ShowNumber());
+      game.StartPhase();
     }
   }
 }
