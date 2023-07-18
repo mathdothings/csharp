@@ -1,4 +1,4 @@
-﻿using get_set;
+﻿using Learn;
 
 var car1 = new Car(100);
 

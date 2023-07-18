@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace get_set
+namespace Learn
 {
-  public class Car
+  public class Car : ICar
   {
     public Car(int maximumVelocity)
     {
