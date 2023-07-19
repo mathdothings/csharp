@@ -5,8 +5,8 @@ using System.Threading.Tasks;
 
 namespace get_set
 {
-  public interface ICar
+  interface ITrain
   {
-    int MaximumVelocity { get; set; }
+    int MaximumSpeed { get; set; }
   }
 }
