@@ -5,7 +5,7 @@ using System.Threading.Tasks;
 
 namespace get_set
 {
-  public class Train
+  public class Train : ITrain
   {
     public Train(int speed)
     {
