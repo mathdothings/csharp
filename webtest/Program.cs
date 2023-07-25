@@ -16,7 +16,6 @@ namespace App
 
       var response = app.MapPost("/home2", () => hello.Show());
       app.Run();
-
     }
   }
 }
