@@ -3,6 +3,7 @@
 
 // Write your JavaScript code.
 
-function test() {
-  console.log("Test!");
-}
+const now = () => new Date().getFullYear();
+
+const currentYear = document.getElementById("current_year");
+currentYear.innerText = now();
