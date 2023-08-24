@@ -2,11 +2,12 @@ using Contact_Register.Data;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
+var connectionString = builder.Configuration.GetConnectionString("Database");
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 builder.Services.AddEntityFrameworkSqlServer()
-    .AddDbContext<DatabaseContext>(x => x.UseSqlServer());
+    .AddDbContext<DatabaseContext>(x => x.UseSqlServer(connectionString));
 
 var app = builder.Build();
 
