@@ -5,7 +5,6 @@ var builder = WebApplication.CreateBuilder(args);
 var connectionString = builder.Configuration.GetConnectionString("Database");
 
 // Add services to the container.
-// Test new ssh.
 builder.Services.AddControllersWithViews();
 builder.Services.AddEntityFrameworkSqlServer()
     .AddDbContext<DatabaseContext>(x => x.UseSqlServer(connectionString));
