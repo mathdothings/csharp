@@ -8,6 +8,7 @@ namespace Contact_Register.Repository
 {
     public interface IContactRepository
     {
+        List<ContactModel> Get();
         ContactModel Insert(ContactModel contact);
     }
 }

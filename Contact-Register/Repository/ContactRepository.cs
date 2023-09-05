@@ -14,6 +14,12 @@ namespace Contact_Register.Repository
         {
             _databaseContext = databaseContext;
         }
+
+        public List<ContactModel> Get()
+        {
+            return _databaseContext.Contacts.ToList();
+        }
+
         public ContactModel Insert(ContactModel contact)
         {
             _databaseContext.Contacts.Add(contact);

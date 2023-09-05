@@ -14,7 +14,7 @@ public class ContactsController : Controller
     }
     public IActionResult Index()
     {
-        return View();
+        return View(_contactRepository.Get());
     }
 
     public IActionResult Insert()
