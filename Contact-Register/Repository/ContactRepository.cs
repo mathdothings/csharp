@@ -20,11 +20,23 @@ namespace Contact_Register.Repository
             return _databaseContext.Contacts.ToList();
         }
 
+        public ContactModel? GetById(int id) {
+            return _databaseContext.Contacts.FirstOrDefault(x => x.Id == id);
+        }
+
         public ContactModel Insert(ContactModel contact)
         {
             _databaseContext.Contacts.Add(contact);
             _databaseContext.SaveChanges();
             
+            return contact;
+        }
+
+        public ContactModel Update(ContactModel contact)
+        {
+            _databaseContext.Contacts.Update(contact);
+            _databaseContext.SaveChanges();
+
             return contact;
         }
     }

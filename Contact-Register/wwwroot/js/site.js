@@ -5,5 +5,5 @@
 
 const now = () => new Date().getFullYear();
 
-const currentYear = document.getElementById("current_year");
-currentYear.innerText = now();
+const currentYear = $("#current_year");
+currentYear.text(now());
