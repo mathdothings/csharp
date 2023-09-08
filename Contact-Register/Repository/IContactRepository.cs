@@ -10,7 +10,7 @@ namespace Contact_Register.Repository
     {
         List<ContactModel> Get();
         ContactModel? GetById(int id);
-        ContactModel Insert(ContactModel contact);
-        ContactModel Update(ContactModel contact);
+        void Insert(ContactModel contact);
+        void Update(ContactModel contact);
     }
 }

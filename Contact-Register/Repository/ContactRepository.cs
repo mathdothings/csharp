@@ -24,20 +24,16 @@ namespace Contact_Register.Repository
             return _databaseContext.Contacts.FirstOrDefault(x => x.Id == id);
         }
 
-        public ContactModel Insert(ContactModel contact)
+        public void Insert(ContactModel contact)
         {
             _databaseContext.Contacts.Add(contact);
             _databaseContext.SaveChanges();
-            
-            return contact;
         }
 
-        public ContactModel Update(ContactModel contact)
+        public void Update(ContactModel contact)
         {
             _databaseContext.Contacts.Update(contact);
             _databaseContext.SaveChanges();
-
-            return contact;
         }
     }
 }

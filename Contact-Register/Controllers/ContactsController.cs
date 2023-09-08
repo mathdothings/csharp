@@ -22,9 +22,9 @@ public class ContactsController : Controller
         return View();
     }
 
-    public IActionResult Update(int id)
+    public IActionResult Update()
     {
-        return View(_contactRepository.GetById(id));
+        return View();
     }
 
     public IActionResult Delete()
@@ -33,13 +33,15 @@ public class ContactsController : Controller
     }
 
     [HttpPost]
-    public IActionResult Insert(ContactModel contact) {
+    public IActionResult Insert(ContactModel contact)
+    {
         _contactRepository.Insert(contact);
         return RedirectToAction("Index");
     }
 
     [HttpPost]
-    public IActionResult Update(ContactModel contact) {
+    public IActionResult Update(ContactModel contact)
+    {
         _contactRepository.Update(contact);
         return RedirectToAction("Index");
     }
