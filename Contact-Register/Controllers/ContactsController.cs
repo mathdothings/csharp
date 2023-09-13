@@ -27,9 +27,9 @@ public class ContactsController : Controller
         return View(_contactRepository.GetById(id));
     }
 
-    public IActionResult Delete()
+    public IActionResult Delete(int id)
     {
-        return View();
+        return View(_contactRepository.GetById(id));
     }
 
     [HttpPost]
@@ -43,6 +43,12 @@ public class ContactsController : Controller
     public IActionResult Update(ContactModel contact)
     {
         _contactRepository.Update(contact);
+        return RedirectToAction("Index");
+    }
+
+    public IActionResult Remove(ContactModel contact)
+    {
+        _contactRepository.Remove(contact);
         return RedirectToAction("Index");
     }
 

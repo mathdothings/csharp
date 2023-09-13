@@ -12,5 +12,6 @@ namespace Contact_Register.Repository
         ContactModel? GetById(int id);
         void Insert(ContactModel contact);
         void Update(ContactModel contact);
+        void Remove(ContactModel contact);
     }
 }

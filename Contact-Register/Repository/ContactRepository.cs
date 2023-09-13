@@ -4,6 +4,7 @@ using System.Linq;
 using System.Threading.Tasks;
 using Contact_Register.Data;
 using Contact_Register.Models;
+using Microsoft.EntityFrameworkCore;
 
 namespace Contact_Register.Repository
 {
@@ -33,6 +34,12 @@ namespace Contact_Register.Repository
         public void Update(ContactModel contact)
         {
             _databaseContext.Contacts.Update(contact);
+            _databaseContext.SaveChanges();
+        }
+
+        public void Remove(ContactModel contact)
+        {   
+            _databaseContext.Contacts.Remove(contact);
             _databaseContext.SaveChanges();
         }
     }

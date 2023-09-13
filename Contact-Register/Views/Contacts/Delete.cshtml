@@ -1,3 +1,4 @@
+@model ContactModel
 @{
   ViewData["Title"] = "Erase Contact";
 }
@@ -6,7 +7,7 @@
   class="d-flex flex-column align-item-center justify-content-center text-center"
 >
   <h3 class="d-inline-block">
-    Do you really want to erase <span class="text-primary">Contact-Name</span>?
+    Do you really want to erase <span class="text-primary">@Model.Name</span>?
   </h3>
 
   <div
@@ -15,7 +16,7 @@
     aria-label="Confirm contact erase group buttons"
   >
     <a role="button" class="btn btn-danger rounded" asp-controller="Contacts" asp-action="Index">Decline</a>
-    <a role="button" class="btn btn-success rounded">Confirm</a>
+    <a role="button" class="btn btn-success rounded" asp-route-id="@Model.Id" asp-controller="Contacts" asp-action="Remove">Confirm</a>
   </div>
 </div>
 
