@@ -35,8 +35,13 @@ public class ContactsController : Controller
     [HttpPost]
     public IActionResult Insert(ContactModel contact)
     {
-        _contactRepository.Insert(contact);
-        return RedirectToAction("Index");
+        if (ModelState.IsValid)
+        {
+            _contactRepository.Insert(contact);
+            return RedirectToAction("Index");
+        }
+
+        return View(contact); 
     }
 
     [HttpPost]

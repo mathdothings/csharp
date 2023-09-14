@@ -7,3 +7,15 @@ const now = () => new Date().getFullYear();
 
 const currentYear = $("#current_year");
 currentYear.text(now());
+
+const contactForm = [
+    contactName = $("#new-contact-name"),
+    contactEmail = $("#new-contact-email"),
+    contactSmartphone = $("#new-contact-smartphone"),
+]
+
+$("#new-contact-button").click(
+    () => {
+        const result = contactForm.map((item) => item.val().trim());
+    }
+);
