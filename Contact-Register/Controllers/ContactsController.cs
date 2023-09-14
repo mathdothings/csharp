@@ -41,14 +41,19 @@ public class ContactsController : Controller
             return RedirectToAction("Index");
         }
 
-        return View(contact); 
+        return View(contact);
     }
 
     [HttpPost]
     public IActionResult Update(ContactModel contact)
     {
-        _contactRepository.Update(contact);
-        return RedirectToAction("Index");
+        if (ModelState.IsValid)
+        {
+            _contactRepository.Update(contact);
+            return RedirectToAction("Index");
+        }
+
+        return View(contact);
     }
 
     public IActionResult Remove(ContactModel contact)
