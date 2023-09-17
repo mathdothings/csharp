@@ -56,13 +56,22 @@ public class ContactsController : Controller
     [HttpPost]
     public IActionResult Update(ContactModel contact)
     {
-        if (ModelState.IsValid)
+        try
         {
-            _contactRepository.Update(contact);
+            if (ModelState.IsValid)
+            {
+                _contactRepository.Update(contact);
+                TempData["SuccessAlert"] = "Contact edited successfully!";
+                return RedirectToAction("Index");
+            }
+
+            return View(contact);
+        }
+        catch (System.Exception error)
+        {
+            TempData["DangerAlert"] = $"Unable to edit this contact! Error:{error.Message}";
             return RedirectToAction("Index");
         }
-
-        return View(contact);
     }
 
     public IActionResult Remove(ContactModel contact)
