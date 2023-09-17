@@ -35,13 +35,22 @@ public class ContactsController : Controller
     [HttpPost]
     public IActionResult Insert(ContactModel contact)
     {
-        if (ModelState.IsValid)
+        try
         {
-            _contactRepository.Insert(contact);
+            if (ModelState.IsValid)
+            {
+                _contactRepository.Insert(contact);
+                TempData["SuccessAlert"] = "Contact registered successfully!";
+                return RedirectToAction("Index");
+            }
+
+            return View(contact);
+        }
+        catch (System.Exception error)
+        {
+            TempData["DangerAlert"] = $"Unable to register contact! Error:{error.Message}";
             return RedirectToAction("Index");
         }
-
-        return View(contact);
     }
 
     [HttpPost]
