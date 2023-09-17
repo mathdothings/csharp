@@ -9,7 +9,8 @@
   
   <div class="form-group mb-2">
     <label for="new-contact-name">Name <span class="text-danger">*</span></label>
-    <input asp-for="Name" type="text" class="form-control" id="new-contact-name" aria-describedby="name-help" placeholder="Name" required>
+    <input asp-for="Name" type="text" class="form-control" id="new-contact-name" aria-describedby="name-help"
+      placeholder="Name" required>
     <small class="text-danger">@Html.ValidationMessageFor(x => x.Name)</small>
   </div>
   <div class="form-group mb-2">

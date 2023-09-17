@@ -3,22 +3,6 @@
   ViewData["Title"] = "Edit Contact";
 }
 
-@if (TempData["SuccessAlert"] != null)
-{
-  <div class="alert alert-success" role="alert">
-    <a class="close-alert btn btn-success rounded d-inline-block position-absolute top-50 end-0 translate-middle-y me-3"><i class="bi bi-check-circle"></i></a>
-    <p class="mb-0">@TempData["SuccessAlert"]</p>
-  </div>
-}
-
-@if (TempData["DangerAlert"] != null)
-{
-  <div class="alert alert-danger" role="alert">
-    <a class="close-alert btn btn-danger rounded d-inline-block position-absolute top-50 end-0 translate-middle-y me-3"><i class="bi bi-exclamation-circle"></i></a>
-    <p class="mb-0">@TempData["DangerAlert"]</p>
-  </div>
-}
-
 <h2 class="text-center">Edit contact</h2>
 
 <form asp-controller="Contacts" asp-action="Update" method="post">
