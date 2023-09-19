@@ -37,10 +37,19 @@ namespace Contact_Register.Repository
             _databaseContext.SaveChanges();
         }
 
-        public void Remove(ContactModel contact)
-        {   
-            _databaseContext.Contacts.Remove(contact);
-            _databaseContext.SaveChanges();
+        public bool Remove(ContactModel contact)
+        {
+            try
+            {
+                _databaseContext.Contacts.Remove(contact);
+                _databaseContext.SaveChanges();
+                return true;
+            }
+            catch
+            {
+                return false;
+                throw new Exception();
+            }
         }
     }
 }

@@ -46,7 +46,7 @@ public class ContactsController : Controller
 
             return View(contact);
         }
-        catch (System.Exception error)
+        catch (Exception error)
         {
             TempData["DangerAlert"] = $"Unable to register contact! Error:{error.Message}";
             return RedirectToAction("Index");
@@ -67,7 +67,7 @@ public class ContactsController : Controller
 
             return View(contact);
         }
-        catch (System.Exception error)
+        catch (Exception error)
         {
             TempData["DangerAlert"] = $"Unable to edit this contact! Error:{error.Message}";
             return RedirectToAction("Index");
@@ -76,8 +76,16 @@ public class ContactsController : Controller
 
     public IActionResult Remove(ContactModel contact)
     {
-        _contactRepository.Remove(contact);
-        return RedirectToAction("Index");
+        try
+        {
+            if (_contactRepository.Remove(contact)) TempData["SuccessAlert"] = "Contact removed successfully!";
+            return RedirectToAction("Index");
+        }
+        catch (Exception error)
+        {
+            TempData["SuccessAlert"] = $"Unable do remove this contact! {error.Message}";
+            return RedirectToAction("Index");
+        }
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
