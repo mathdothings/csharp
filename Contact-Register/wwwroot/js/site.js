@@ -9,3 +9,7 @@ const currentYear = $("#current_year");
 currentYear.text(now());
 
 $(".close-alert").click(() => $(".alert").fadeOut("fast"));
+
+$(document).ready( function () {
+    $('#contact-list-table').DataTable();
+} );
