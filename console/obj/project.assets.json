@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/home/mathdothings/learn/csharp/console/Console.csproj",
+      "projectUniqueName": "/home/mathdothings/Dev/Learn/csharp/console/Console.csproj",
       "projectName": "Console",
-      "projectPath": "/home/mathdothings/learn/csharp/console/Console.csproj",
+      "projectPath": "/home/mathdothings/Dev/Learn/csharp/console/Console.csproj",
       "packagesPath": "/home/mathdothings/.nuget/packages/",
-      "outputPath": "/home/mathdothings/learn/csharp/console/obj/",
+      "outputPath": "/home/mathdothings/Dev/Learn/csharp/console/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "/home/mathdothings/.nuget/NuGet/NuGet.Config"
@@ -58,7 +58,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.120/RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "/usr/lib/dotnet/sdk/6.0.122/RuntimeIdentifierGraph.json"
       }
     }
   }

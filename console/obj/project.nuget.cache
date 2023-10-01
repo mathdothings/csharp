@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "lAvMREWioJVEpCSNtGBOk2RYGbzSbK6D7NCDIxb8PEIKqYvzGWasq+PWzw6A7o6KfzOVlnTlgTT4ise6Ziojvg==",
+  "dgSpecHash": "lNzank4Jeay1IInMpuGRwtznuh1hQVxNZVUiqX2O8V2tKZ6Iz2Wi03dsVzKrhcf6OvSZMKsYL07T8x0Vmf27Eg==",
   "success": true,
-  "projectFilePath": "/home/mathdothings/learn/csharp/console/Console.csproj",
+  "projectFilePath": "/home/mathdothings/Dev/Learn/csharp/console/Console.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }
