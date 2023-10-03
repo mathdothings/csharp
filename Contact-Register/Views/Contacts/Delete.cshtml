@@ -9,8 +9,8 @@
   </h3>
 
   <div class="gap-1" role="group" aria-label="Confirm contact erase group buttons">
-    <a role="button" class="btn btn-danger rounded" asp-controller="Contacts" asp-action="Index">Decline</a>
+    <a role="button" class="btn btn-danger rounded" asp-controller="Contacts" asp-action="Index"><p class="d-inline-block mb-0"><i class="bi bi-x-circle"></i></p></a>
     <a role="button" class="btn btn-success rounded" asp-route-id="@Model.Id" asp-controller="Contacts"
-      asp-action="Remove">Confirm</a>
+      asp-action="Remove"><p class="d-inline-block mb-0"><i class="bi bi-check-circle"></i></p></a>
   </div>
 </div>
