@@ -1,6 +1,6 @@
-@model List<ContactModel>
+@model List<UserModel>
 @{
-  ViewData["Title"] = "List of Contacts";
+  ViewData["Title"] = "List of Users";
 }
 
 @if (TempData["SuccessAlert"] != null)
@@ -23,38 +23,45 @@
 
 <div>
   @* button to insert a new contact *@
-  <a role="button" class="btn btn-outline-primary" asp-controller="Contacts" asp-action="Insert"><i
+  <a role="button" class="btn btn-outline-primary" asp-controller="Users" asp-action="Insert"><i
       class="bi bi-plus-circle"></i></a>
 </div>
 
-<h1 class="text-center my-4 h1">Contacts List</h1>
+<h1 class="text-center my-4 h1">Users List</h1>
 
-<table class="table hover stripe" id="contact-list-table">
+<table class="table hover stripe" id="user-list-table">
   <thead>
     <tr>
       <th scope="col">#</th>
       <th scope="col">Name</th>
       <th scope="col">Email</th>
-      <th scope="col">Smartphone</th>
+      <th scope="col">Login</th>
+      <th scope="col">Profile</th>
+      <th scope="col">Created</th>
+      <th scope="col">Updated</th>
       <th scope="col"></th>
     </tr>
   </thead>
   <tbody>
     @if (Model != null && Model.Any())
     {
+
       @foreach (var item in Model)
       {
         <tr class="align-middle">
           <th scope="row">@item.Id</th>
           <td>@item.Name</td>
           <td>@item.Email</td>
-          <td>@item.Smartphone</td>
+          <td>@item.Login</td>
+          <td>@item.Profile</td>
+          <td>@item.Created</td>
+          <td>@item.Updated</td>
           <td>
             <div class="btn-group gap-2" role="group" aria-label="edit and delete contact list button group">
-              <a role="button" class="btn btn-warning rounded d-flex gap-1" asp-route-id="@item.Id"
-                asp-controller="Contacts" asp-action="Update"><i class="bi bi-pencil d-inline-block"></i></a>
+              <a role="button" class="btn btn-warning rounded d-flex gap-1" asp-route-id="@item.Id" asp-controller="Users"
+                asp-action="Update"><i class="bi bi-pencil d-inline-block"></i></a>
               <a role="button" class="btn btn-danger rounded d-flex gap-1 text-black" asp-route-id="@item.Id"
-                asp-controller="Contacts" asp-action="Delete"><i class="bi bi-trash3"></i></a>
+                asp-controller="Users" asp-action="Delete"><i class="bi bi-trash3"></i></a>
             </div>
           </td>
         </tr>
@@ -64,7 +71,7 @@
     {
       <tr class="align-middle">
         <th>
-        <td class="text-danger">There are no Contacts!</td>
+        <td class="text-danger">There are no Users!</td>
         </th>
       </tr>
     }

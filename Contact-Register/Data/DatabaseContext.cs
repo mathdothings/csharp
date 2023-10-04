@@ -11,6 +11,7 @@ namespace Contact_Register.Data
     {
         public DatabaseContext(DbContextOptions<DatabaseContext> options) : base(options) { }
         public DbSet<ContactModel> Contacts => Set<ContactModel>();
+        public DbSet<UserModel> Users => Set<UserModel>();
     }
 
 }
