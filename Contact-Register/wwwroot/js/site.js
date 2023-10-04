@@ -13,3 +13,10 @@ $(".close-alert").click(() => $(".alert").fadeOut("fast"));
 $(document).ready( function () {
     $('#contact-list-table').DataTable();
 } );
+
+const links = $("li[class='nav-item']");
+
+$("li[class='nav-item']").click((event) => {
+    event.preventDefault();
+    console.log(this);
+})
