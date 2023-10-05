@@ -10,13 +10,11 @@ currentYear.text(now());
 
 $(".close-alert").click(() => $(".alert").fadeOut("fast"));
 
+function initializeDatatable(tableIdSelector) {
+    $(tableIdSelector).DataTable();
+}
+
 $(document).ready( function () {
-    $('#contact-list-table').DataTable();
+    initializeDatatable('#contact-list-table')
+    initializeDatatable('#user-list-table')
 } );
-
-const links = $("li[class='nav-item']");
-
-$("li[class='nav-item']").click((event) => {
-    event.preventDefault();
-    console.log(this);
-})
