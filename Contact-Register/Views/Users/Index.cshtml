@@ -30,17 +30,20 @@
 <h1 class="text-center my-4 h1">Users List</h1>
 
 <table class="table hover stripe" id="user-list-table">
+  
   <thead>
     <tr>
       <th scope="col">#</th>
       <th scope="col">Name</th>
       <th scope="col">Email</th>
       <th scope="col">Login</th>
+      <th scope="col">Profile</th>
       <th scope="col">Created</th>
       <th scope="col">Updated</th>
       <th scope="col"></th>
     </tr>
   </thead>
+
   <tbody>
     @if (Model != null && Model.Any())
     {
@@ -80,4 +83,5 @@
       </tr>
     }
   </tbody>
+  
 </table>

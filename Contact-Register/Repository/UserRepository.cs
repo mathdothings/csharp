@@ -27,12 +27,14 @@ namespace Contact_Register.Repository
 
         public void Insert(UserModel contact)
         {
+            contact.Created = DateTime.Now;
             _databaseContext.Users.Add(contact);
             _databaseContext.SaveChanges();
         }
 
         public void Update(UserModel contact)
         {
+            contact.Updated = DateTime.Now;
             _databaseContext.Users.Update(contact);
             _databaseContext.SaveChanges();
         }
