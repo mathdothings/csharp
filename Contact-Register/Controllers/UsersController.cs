@@ -70,7 +70,7 @@ public class UsersController : Controller
         }
         catch (Exception error)
         {
-            TempData["DangerAlert"] = $"Unable to edit this user! Error:{error.Message}";
+            TempData["DangerAlert"] = $"Unable to edit this user! {error.Message}";
             return RedirectToAction("Index");
         }
     }
