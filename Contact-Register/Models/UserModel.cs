@@ -16,7 +16,7 @@ namespace Contact_Register.Models
         public string? Name { get; set; }
 
         [Required(ErrorMessage = "Login is required!")]
-        [StringLength(25, ErrorMessage = "Login must have at least five digits!")]
+        [StringLength(25, ErrorMessage = "Login can have a maximum of 25 digits!")]
         public string? Login { get; set; }
 
         [Required(ErrorMessage = "Email is required!")]
@@ -27,7 +27,7 @@ namespace Contact_Register.Models
         public Profile Profile { get; set; }
 
         [Required(ErrorMessage = "Password is required!")]
-        [StringLength(25, ErrorMessage = "Password must have at least five digits!")]
+        [StringLength(25, ErrorMessage = "Password can have a maximum of 25 digits!")]
         public string? Password { get; set; }
 
         public DateTime Created { get; set; }
