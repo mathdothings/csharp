@@ -1,3 +1,4 @@
+@using System.Globalization;
 @model List<UserModel>
 @{
   ViewData["Title"] = "List of Users";
@@ -56,8 +57,8 @@
           <td>@item.Email</td>
           <td>@item.Login</td>
           <td>@item.Profile</td>
-          <td>@item.Created</td>
-          <td>@item.Updated</td>
+          <td>@item.Created.ToString(CultureInfo.CurrentCulture)</td>
+          <td>@item.Updated?.ToString(CultureInfo.CurrentCulture)</td>
           <td>
             <div class="btn-group gap-2" role="group" aria-label="edit and delete contact list button group">
               <a role="button" class="btn btn-warning rounded d-flex gap-1" asp-route-id="@item.Id" asp-controller="Users"
