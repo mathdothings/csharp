@@ -1,8 +1,33 @@
-﻿using System.Globalization;
+﻿namespace Console
+{
+    using System;
+    public class Program
+    {
+        public static void Main()
+        {
+            var player = new Player();
+            Console.Clear();
+            Console.WriteLine($"Name: '{player.Name}'");
+            Console.WriteLine($"Attack: '{player.Attack}'");
+            Console.WriteLine($"Ping: '{player.Ping}'");
+            Console.WriteLine($"Alive: '{player.Alive}'");
+        }
+    }
 
-DateOnly thisDate = new DateOnly(2008, 3, 15);
-CultureInfo culture = new CultureInfo("pt-BR");
-Console.WriteLine(thisDate.ToString(CultureInfo.CurrentCulture));
-Console.WriteLine(thisDate.ToString(culture));
+    public class Unit
+    {
+        public string? Type { get; set; }
+        public int Attack { get; set; }
+        public int Defense { get; set; }
+        public int HP { get; set; }
+        public int Speed { get; set; }
+        public bool Alive { get; set; }
+    }
 
-System.Console.WriteLine(CultureInfo.CurrentCulture);
+    public class Player : Unit
+    {
+        public int Id { get; set; }
+        public string? Name { get; set; }
+        public float Ping { get; set; }
+    }
+}
