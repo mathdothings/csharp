@@ -6,8 +6,10 @@
         {
             System.Console.Clear();
 
-            var john = new Names();
-            john.Name = "John";
+            var john = new Names
+            {
+                Name = "John"
+            };
             System.Console.WriteLine(john.Name);
         }
     }
