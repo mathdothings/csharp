@@ -1,4 +1,4 @@
-﻿using StructExercise03;
+﻿using StructExercise04;
 namespace Start
 {
     class Program
