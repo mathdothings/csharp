@@ -1,12 +1,11 @@
-﻿using StructExercise04;
-namespace Start
+﻿using StructExercise06;
+namespace Start;
+
+class Program
 {
-    class Program
+    static void Main()
     {
-        static void Main()
-        {
-            Console.Clear();
-            Exercise.Answer();
-        }
+        Console.Clear();
+        Exercise.Answer();
     }
 }
