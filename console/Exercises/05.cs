@@ -1,7 +1,9 @@
+// Exercise 05
 namespace StructExercise05;
 
 struct StructNumber { public int n; }
 class ClassNumber { public int n; }
+
 class Exercise
 {
     public static void ChangeStruct(StructNumber sn) { sn.n = 1; }

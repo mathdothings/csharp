@@ -1,11 +1,10 @@
-using System.Runtime.CompilerServices;
-
+// Exercise 06
 namespace StructExercise06;
 
 struct Mine
 {
     public int MyProperty { get; set; }
-    int myField = 10;
+    readonly int myField = 10;
     public readonly string MyMethod() => $"Field: {myField} Property: {MyProperty}";
 
     public Mine()
