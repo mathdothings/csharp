@@ -1,4 +1,4 @@
-﻿using StructExercise06;
+﻿using StructExercise10;
 namespace Start;
 
 class Program
