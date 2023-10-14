@@ -5,8 +5,8 @@ struct Square
     public int width;
     public int height;
 
-    public int area() => width * height;
-    public int perimeter() => width * 2 + height * 2;
+    public readonly int Area() => width * height;
+    public readonly int Perimeter() => width * 2 + height * 2;
 }
 
 class Exercise
@@ -21,7 +21,7 @@ class Exercise
         System.Console.Write("Height: ");
         square.height = int.Parse(Console.ReadLine()
             ?? throw new Exception("Invalid value!"));
-        System.Console.WriteLine($"Area: {square.area()}");
-        System.Console.WriteLine($"Perimeter: {square.perimeter()}");
+        System.Console.WriteLine($"Area: {square.Area()}");
+        System.Console.WriteLine($"Perimeter: {square.Perimeter()}");
     }
 }
