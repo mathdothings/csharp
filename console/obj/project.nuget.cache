@@ -1,10 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "bMUNw/dDW2+rhiHClnvbVQ5s6xwIjHBoRaqVQVYa0cYiZtBxQUNdgzVsRbvlAU8QizQ4V/rXtSS/u2m+EtMFWw==",
+  "dgSpecHash": "JsbTsNFtGUhlJHXebXOWTLbOc4gSEbX2cR4GQ8SdfnzXCjCr3J/QLwj8XOWx7UICLb5VEx9NIDZbeW1puc2AWA==",
   "success": true,
   "projectFilePath": "/home/mathdothings/Dev/Learn/csharp/console/Console.csproj",
   "expectedPackageFiles": [
-    "/home/mathdothings/.nuget/packages/microsoft.netcore.app.host.linux-x64/6.0.23/microsoft.netcore.app.host.linux-x64.6.0.23.nupkg.sha512"
+    "/home/mathdothings/.nuget/packages/microsoft.netcore.app.host.linux-x64/6.0.24/microsoft.netcore.app.host.linux-x64.6.0.24.nupkg.sha512"
   ],
   "logs": []
 }

@@ -21,6 +21,7 @@ class Exercise
         System.Console.Write("Height: ");
         square.height = int.Parse(Console.ReadLine()
             ?? throw new Exception("Invalid value!"));
+        System.Console.WriteLine();
         System.Console.WriteLine($"Area: {square.Area()}");
         System.Console.WriteLine($"Perimeter: {square.Perimeter()}");
     }
